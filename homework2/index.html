@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+ <div class="left-column">
+
+ <div class="add-panel">
+ <input type="text" placeholder="Назва товару">
+ <button data-tooltip="Додати товар">Додати</button>
+ </div>
+
+<div class="item">
+<span class="bought">Помідори</span>
+<span class="number">2</span>
+<button data-tooltip="Змінити статус">Не куплено</button>
+</div>
+
+<div class="item">
+<span>Печиво</span>
+
+<div class="count">
+<button class="minus" data-tooltip="Зменшити кількість">-</button>
+<span class="number">2</span>
+<button class="plus" data-tooltip="Збільшити кількість">+</button>
+</div>
+
+<button data-tooltip="Змінити статус">Куплено</button>
+<button class="delete" data-tooltip="Видалити товар">x</button>
+</div>
+<div class="item">
+<span>Сир</span>
+<div class="count">
+<button class="minus" data-tooltip="Зменшити кількість">-</button>
+<span class="number">1</span>
+<button class="plus" data-tooltip="Збільшити кількість">+</button>
+</div>
+
+<button data-tooltip="Змінити статус">Куплено</button>
+<button class="delete" data-tooltip="Видалити товар">x</button>
+</div>
+
+</div>
+
+<div class="right-column">
+
+<div class="block">
+<h2>Залишилося</h2>
+
+<div class="badge-item">
+Печиво <span class="badge-number">2</span>
+</div>
+
+<div class="badge-item">
+Сир <span class="badge-number">1</span>
+</div>
+</div>
+
+<div class="block">
+<h2>Куплено</h2>
+
+<div class="badge-item">
+Помідори <span class="badge-number">2</span>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="badge">BuyList</div>
+
+</body>
+</html>

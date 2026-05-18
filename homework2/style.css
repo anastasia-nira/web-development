@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.add-panel {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 70%;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.item span:first-child {
+    flex: 1;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.count button {
+    width: 30px;
+    height: 30px;
+}
+
+.count button:first-child {
+    background-color: red;
+    color: white;
+}
+
+.count button:last-child {
+    background-color: green;
+    color: white;
+}
+
+.item > button {
+    min-width: 90px;
+    height: 35px;
+}
+
+.item > button:last-child {
+    min-width: 35px;
+    background-color: #cc0000;
+    color: white;
+}
+
+.block {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.badge-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.badge-number {
+    background-color: orange;
+    color: white;
+
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.badge {
+    position: fixed;
+    left: 20px;
+    bottom: -35px;
+
+    background-color: #4b0082;
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 10px 10px 0 0;
+
+    font-weight: bold;
+
+    transition: 0.5s;
+}
+
+.badge:hover {
+    bottom: 0;
+    background-color: #6a0dad;
+}
+
+button::after {
+    content: attr(data-tooltip);
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 120%;
+
+    transform: translateX(-50%) scale(0);
+
+    background-color: #4b0082;
+    color: white;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+button:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+@media (max-width: 650px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media print {
+
+}
+
+.bought {
+    text-decoration: line-through;
+}
